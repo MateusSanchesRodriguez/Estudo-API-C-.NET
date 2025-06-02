@@ -22,7 +22,6 @@ public class FilmeController : ControllerBase
     }
 
 
-
     /// <summary>
     /// Adiciona um filme ao banco de dados
     /// </summary>
@@ -37,7 +36,6 @@ public class FilmeController : ControllerBase
         _context.Filmes.Add(filme);
         _context.SaveChanges();
         return CreatedAtAction(nameof(RecuperarFilmePorId), new { id = filme.Id }, filme);
-
     }
 
     [HttpGet]
